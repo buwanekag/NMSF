@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="295" id="KGk-i7-Jjw" customClass="DescriptionTableViewCell" customModule="NMSF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="295"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="295"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtR-sS-aCq">
+                        <rect key="frame" x="32" y="42" width="260" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="DarkBlue"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-en-zrM">
+                        <rect key="frame" x="32" y="78.5" width="260" height="188.5"/>
+                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam tortor vel nibh congue imperdiet. Integer maximus neque tellus. Vivamus sodales egestas tincidunt. Fusce facilisis metus tellus, vulputate finibus urna varius at. Ut sit amet ante ex.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="DarkBlue"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qi9-en-zrM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="DXg-53-xhI"/>
+                    <constraint firstAttribute="trailing" secondItem="qi9-en-zrM" secondAttribute="trailing" constant="32" id="Gzd-Zl-mCc"/>
+                    <constraint firstItem="XtR-sS-aCq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="42" id="Yey-vK-jQt"/>
+                    <constraint firstAttribute="bottom" secondItem="qi9-en-zrM" secondAttribute="bottom" constant="28" id="ouI-t6-PNL"/>
+                    <constraint firstAttribute="trailing" secondItem="XtR-sS-aCq" secondAttribute="trailing" constant="32" id="rwk-Th-8qU"/>
+                    <constraint firstItem="qi9-en-zrM" firstAttribute="top" secondItem="XtR-sS-aCq" secondAttribute="bottom" constant="16" id="vfj-ox-t90"/>
+                    <constraint firstItem="XtR-sS-aCq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="ylz-30-Tjk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="qi9-en-zrM" id="fhX-UI-Tp3"/>
+                <outlet property="titleLabel" destination="XtR-sS-aCq" id="gad-vh-eHp"/>
+            </connections>
+            <point key="canvasLocation" x="143.47826086956522" y="136.27232142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DarkBlue">
+            <color red="0.0" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

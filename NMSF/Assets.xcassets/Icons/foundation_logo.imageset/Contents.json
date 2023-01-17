@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "NMSF_logo_stacked_CMYK_KO 1.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

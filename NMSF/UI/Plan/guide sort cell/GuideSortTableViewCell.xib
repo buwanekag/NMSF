@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="236" id="KGk-i7-Jjw" customClass="GuideSortTableViewCell" customModule="NMSF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDs-XT-m7v" userLabel="Sort Shadow View">
+                        <rect key="frame" x="32" y="179.5" width="208" height="36.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57m-Wy-cDG" userLabel="Sort Container View">
+                        <rect key="frame" x="32" y="179.5" width="208" height="36.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Az6-Ct-afe">
+                                <rect key="frame" x="8" y="8" width="187" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tx-AC-OGj">
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="DarkBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron_down" translatesAutoresizingMaskIntoConstraints="NO" id="hol-e6-3Lw">
+                                        <rect key="frame" x="175" y="0.0" width="12" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="65u-9f-Hpi"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Az6-Ct-afe" secondAttribute="trailing" constant="13" id="Sax-Y5-t8f"/>
+                            <constraint firstItem="Az6-Ct-afe" firstAttribute="top" secondItem="57m-Wy-cDG" secondAttribute="top" constant="8" id="ddh-ZC-vea"/>
+                            <constraint firstItem="Az6-Ct-afe" firstAttribute="leading" secondItem="57m-Wy-cDG" secondAttribute="leading" constant="8" id="ikR-2U-22s"/>
+                            <constraint firstAttribute="bottom" secondItem="Az6-Ct-afe" secondAttribute="bottom" constant="8" id="k4F-Bu-U5B"/>
+                            <constraint firstAttribute="width" constant="208" id="nU6-ud-LPz"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-kW-KFn">
+                        <rect key="frame" x="32" y="20" width="256" height="119.5"/>
+                        <attributedString key="attributedText">
+                            <fragment>
+                                <string key="content">Blue Star Operators are vel odio eu enim est. Id blandit rutrum amet nisi, fringilla. Let them be your guide to the Florida Keys!</string>
+                                <attributes>
+                                    <color key="NSColor" name="DarkBlue"/>
+                                    <font key="NSFont" metaFont="system" size="17"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.28" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2dc-kW-KFn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="GL7-QD-9q7"/>
+                    <constraint firstAttribute="bottom" secondItem="57m-Wy-cDG" secondAttribute="bottom" constant="20" id="VtB-96-guA"/>
+                    <constraint firstItem="2dc-kW-KFn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Yv6-jN-kdt"/>
+                    <constraint firstItem="57m-Wy-cDG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="eCe-I5-iuH"/>
+                    <constraint firstItem="jDs-XT-m7v" firstAttribute="trailing" secondItem="57m-Wy-cDG" secondAttribute="trailing" id="nL8-5Q-RHo"/>
+                    <constraint firstItem="jDs-XT-m7v" firstAttribute="top" secondItem="57m-Wy-cDG" secondAttribute="top" id="ntG-MW-f6H"/>
+                    <constraint firstItem="57m-Wy-cDG" firstAttribute="top" secondItem="2dc-kW-KFn" secondAttribute="bottom" constant="40" id="q8Q-OA-I9e"/>
+                    <constraint firstItem="jDs-XT-m7v" firstAttribute="leading" secondItem="57m-Wy-cDG" secondAttribute="leading" id="rPm-6e-EAL"/>
+                    <constraint firstItem="jDs-XT-m7v" firstAttribute="bottom" secondItem="57m-Wy-cDG" secondAttribute="bottom" id="umb-6i-tOc"/>
+                    <constraint firstAttribute="trailing" secondItem="2dc-kW-KFn" secondAttribute="trailing" constant="32" id="xkm-TH-AhS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailsLabel" destination="2dc-kW-KFn" id="xyI-QF-h60"/>
+                <outlet property="sortContainerView" destination="57m-Wy-cDG" id="1sp-AT-90k"/>
+                <outlet property="sortLabel" destination="3Tx-AC-OGj" id="w31-Fj-cVF"/>
+                <outlet property="sortShadowView" destination="jDs-XT-m7v" id="YmL-eP-c6O"/>
+            </connections>
+            <point key="canvasLocation" x="-30.434782608695656" y="139.95535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron_down" width="12" height="7"/>
+        <namedColor name="DarkBlue">
+            <color red="0.0" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

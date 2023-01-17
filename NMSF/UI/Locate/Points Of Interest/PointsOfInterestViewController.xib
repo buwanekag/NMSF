@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PointsOfInterestViewController" customModule="NMSF" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="vGh-cV-I31" id="d3e-dL-kRy"/>
+                <outlet property="view" destination="7nA-XF-k86" id="yOC-4M-g7E"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7nA-XF-k86">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_background" translatesAutoresizingMaskIntoConstraints="NO" id="xaz-KD-VZM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGh-cV-I31">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iPw-hI-Bup"/>
+                        <outlet property="delegate" destination="-1" id="WBN-Yw-kly"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="YX0-ep-Cex"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xaz-KD-VZM" firstAttribute="top" secondItem="7nA-XF-k86" secondAttribute="top" id="McE-JQ-RAw"/>
+                <constraint firstItem="YX0-ep-Cex" firstAttribute="trailing" secondItem="xaz-KD-VZM" secondAttribute="trailing" id="NfR-n9-JHt"/>
+                <constraint firstItem="vGh-cV-I31" firstAttribute="top" secondItem="YX0-ep-Cex" secondAttribute="top" id="bGG-3g-f9W"/>
+                <constraint firstItem="vGh-cV-I31" firstAttribute="trailing" secondItem="YX0-ep-Cex" secondAttribute="trailing" id="e5m-35-wCP"/>
+                <constraint firstItem="vGh-cV-I31" firstAttribute="leading" secondItem="YX0-ep-Cex" secondAttribute="leading" id="h25-Tt-19O"/>
+                <constraint firstItem="vGh-cV-I31" firstAttribute="bottom" secondItem="7nA-XF-k86" secondAttribute="bottom" id="huX-K4-gmL"/>
+                <constraint firstItem="xaz-KD-VZM" firstAttribute="leading" secondItem="YX0-ep-Cex" secondAttribute="leading" id="x1L-yh-5dS"/>
+                <constraint firstAttribute="bottom" secondItem="xaz-KD-VZM" secondAttribute="bottom" id="yS2-FV-Vpx"/>
+            </constraints>
+            <point key="canvasLocation" x="95.652173913043484" y="115.84821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wave_background" width="376" height="816"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

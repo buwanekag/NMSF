@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccessibleByView" customModule="NMSF" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="8ff-kN-yMM" id="sv9-my-6fF"/>
+                <outlet property="typeLabel" destination="6GO-hU-tsR" id="F2l-PO-bIJ"/>
+                <outlet property="view" destination="hpz-dX-iFe" id="ATX-Wu-82u"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hpz-dX-iFe">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ff-kN-yMM">
+                    <rect key="frame" x="9" y="0.0" width="42" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="Gxc-Gv-kYs"/>
+                        <constraint firstAttribute="height" constant="42" id="ahT-Pk-YMC"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-hU-tsR">
+                    <rect key="frame" x="0.0" y="54" width="60" height="26"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="qce-u6-7c8"/>
+                        <constraint firstAttribute="width" constant="60" id="vaF-S3-on6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <color key="textColor" name="DarkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="wrj-H1-Gc5"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6GO-hU-tsR" firstAttribute="top" secondItem="8ff-kN-yMM" secondAttribute="bottom" constant="12" id="9Jf-58-jvw"/>
+                <constraint firstItem="6GO-hU-tsR" firstAttribute="bottom" secondItem="hpz-dX-iFe" secondAttribute="bottom" id="EWX-da-cxy"/>
+                <constraint firstItem="6GO-hU-tsR" firstAttribute="leading" secondItem="hpz-dX-iFe" secondAttribute="leading" id="KGP-LE-2dr"/>
+                <constraint firstItem="8ff-kN-yMM" firstAttribute="top" secondItem="hpz-dX-iFe" secondAttribute="top" id="U2f-G6-9Se"/>
+                <constraint firstItem="6GO-hU-tsR" firstAttribute="trailing" secondItem="hpz-dX-iFe" secondAttribute="trailing" id="omN-Xe-kz4"/>
+                <constraint firstItem="8ff-kN-yMM" firstAttribute="centerX" secondItem="hpz-dX-iFe" secondAttribute="centerX" id="tf3-Dt-8Bc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="28.985507246376812" y="-381.69642857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DarkBlue">
+            <color red="0.0" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

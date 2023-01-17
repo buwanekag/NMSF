@@ -1,0 +1,7 @@
+force_for_new_devices(true)
+force(true)
+git_branch("noaa")
+git_url("git@git.mindgrub.net:mobile/certificates.git")
+team_id("8JP8U5RND9")
+team_name("National Marine Sanctuary Foundation")
+generate_apple_certs(true)

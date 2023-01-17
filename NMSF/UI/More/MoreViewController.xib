@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreViewController" customModule="NMSF" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="Uvi-qP-vOU" id="zWo-yS-9M8"/>
+                <outlet property="tableView" destination="Wk4-Vl-nVN" id="fe7-Dl-tPu"/>
+                <outlet property="view" destination="M94-Vm-G5f" id="mbs-nt-hxA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="M94-Vm-G5f">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wk4-Vl-nVN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3aY-Xr-N8m"/>
+                        <outlet property="delegate" destination="-1" id="cz5-LL-KPk"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Uvi-qP-vOU" customClass="MoreHeaderView" customModule="NMSF" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="y8I-Lv-lGj"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="y8I-Lv-lGj" firstAttribute="trailing" secondItem="Wk4-Vl-nVN" secondAttribute="trailing" id="Izt-K8-cPW"/>
+                <constraint firstItem="Wk4-Vl-nVN" firstAttribute="top" secondItem="M94-Vm-G5f" secondAttribute="top" id="M3v-lu-swG"/>
+                <constraint firstItem="Uvi-qP-vOU" firstAttribute="trailing" secondItem="y8I-Lv-lGj" secondAttribute="trailing" id="fEo-eS-SYC"/>
+                <constraint firstItem="y8I-Lv-lGj" firstAttribute="bottom" secondItem="Wk4-Vl-nVN" secondAttribute="bottom" id="lwY-0T-rmQ"/>
+                <constraint firstItem="Uvi-qP-vOU" firstAttribute="leading" secondItem="y8I-Lv-lGj" secondAttribute="leading" id="qxF-wt-WSL"/>
+                <constraint firstItem="Wk4-Vl-nVN" firstAttribute="leading" secondItem="y8I-Lv-lGj" secondAttribute="leading" id="z10-YO-omi"/>
+                <constraint firstItem="Uvi-qP-vOU" firstAttribute="top" secondItem="M94-Vm-G5f" secondAttribute="top" id="zUX-Sk-J9Q"/>
+            </constraints>
+            <point key="canvasLocation" x="95.652173913043484" y="115.84821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

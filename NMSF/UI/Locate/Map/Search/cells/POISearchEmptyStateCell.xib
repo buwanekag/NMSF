@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="256" id="LE7-0A-7XZ" customClass="POISearchEmptyStateCell" customModule="NMSF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LE7-0A-7XZ" id="CC8-Oq-K8C">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="398"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_blue_filled" translatesAutoresizingMaskIntoConstraints="NO" id="OeM-tu-yQk">
+                        <rect key="frame" x="142" y="40" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="3h9-o2-hxd"/>
+                            <constraint firstAttribute="height" constant="36" id="Xxf-cf-dyN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin typing to search for specific points of interest within the sanctuary." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srr-AL-Kxp">
+                        <rect key="frame" x="32" y="92" width="256" height="61"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="DarkBlue"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OeM-tu-yQk" firstAttribute="centerX" secondItem="CC8-Oq-K8C" secondAttribute="centerX" id="4xT-lh-d9J"/>
+                    <constraint firstItem="Srr-AL-Kxp" firstAttribute="top" secondItem="OeM-tu-yQk" secondAttribute="bottom" constant="16" id="DGq-67-6Si"/>
+                    <constraint firstAttribute="trailing" secondItem="Srr-AL-Kxp" secondAttribute="trailing" constant="32" id="F9R-GR-Crl"/>
+                    <constraint firstItem="OeM-tu-yQk" firstAttribute="top" secondItem="CC8-Oq-K8C" secondAttribute="top" constant="40" id="HFl-qY-rYV"/>
+                    <constraint firstItem="Srr-AL-Kxp" firstAttribute="leading" secondItem="CC8-Oq-K8C" secondAttribute="leading" constant="32" id="Vos-J9-nyr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Srr-AL-Kxp" secondAttribute="bottom" constant="234" id="ZYW-qG-jwq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="xHs-jO-4kr"/>
+            <connections>
+                <outlet property="emptyStateLabel" destination="Srr-AL-Kxp" id="KRd-Tf-XVV"/>
+            </connections>
+            <point key="canvasLocation" x="228.98550724637684" y="109.15178571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="search_blue_filled" width="36" height="36"/>
+        <namedColor name="DarkBlue">
+            <color red="0.0" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

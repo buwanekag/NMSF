@@ -1,0 +1,119 @@
+default_platform(:ios)
+
+def validate_feature
+  run_tests(
+    scheme: "#{ENV["SCHEME_PREFIX"]}#{ENV["DEV_SUFFIX"]}",
+  )
+end
+
+def generate_ipa(configuration, suffix)
+  build_number = Time.now.strftime("%Y%m%d%H%M")
+
+  plist_path = File.expand_path "../#{ENV["PLIST_PATH"]}"
+
+  set_info_plist_value(
+    key: "CFBundleVersion",
+    path: plist_path,
+    value: build_number,
+  )
+
+  version = get_version_number(
+    configuration: configuration,
+    target: ENV["TARGET_NAME"],
+  )
+
+  set_info_plist_value(
+    key: "CFBundleShortVersionString",
+    path: plist_path,
+    value: format("%<version>s%<version_suffix>s", version: version, version_suffix: suffix),
+  )
+
+  create_keychain(
+    default_keychain: true,
+    name: "fastlane",
+    password: ENV["TARGET_NAME"],
+    timeout: 3600,
+    unlock: true,
+  )
+
+  match(
+    api_key_path: ENV["APPLE_API_KEY_JSON"],
+    app_identifier: ENV["APPLE_APP_IDENTIFIER"],
+    keychain_name: "fastlane",
+    keychain_password: ENV["TARGET_NAME"],
+    type: "adhoc",
+  )
+
+  ipa = gym(
+    clean: true,
+    configuration: configuration,
+    export_method: "ad-hoc",
+    export_team_id: ENV["APPLE_TEAM_ID"],
+    include_bitcode: true,
+    scheme: "#{ENV["SCHEME_PREFIX"]}#{suffix}",
+    silent: true,
+    workspace: Dir["*.xcworkspace"].first,
+  )
+
+  delete_keychain(
+    name: "fastlane",
+  )
+
+  { ipa: ipa, build_number: build_number, version: version }
+end
+
+def add_tag(tag)
+  add_git_tag(
+    tag: tag,
+  )
+
+  push_git_tags(
+    remote: ENV["CI_SSH_PROJECT_URL"],
+    tag: tag,
+  )
+end
+
+platform :ios do
+  desc "Builds the project and runs tests"
+  lane :validate_feature do
+    validate_feature
+  end
+
+  desc "Deploys a QA version fo AppCenter"
+  lane :deploy_qa do
+    generated = generate_ipa(ENV["QA_CONFIGURATION"], ENV["QA_SUFFIX"])
+
+    appcenter_upload(
+      api_token: ENV["APPCENTER_API_TOKEN"],
+      app_name: ENV["APPCENTER_APP_NAME"],
+      destinations: "Collaborators",
+      file: generated[:ipa],
+      mandatory_update: true,
+      notify_testers: false,
+      owner_name: ENV["APPCENTER_OWNER_NAME"],
+    )
+
+    tag = format("v%<version>s_qa_%<build_number>s", version: generated[:version], build_number: generated[:build_number])
+
+    add_tag(tag)
+  end
+
+  desc "Deploys a STAGE version to AppCenter"
+  lane :deploy_stage do
+    generated = generate_ipa(ENV["STAGE_CONFIGURATION"], ENV["STAGE_SUFFIX"])
+
+    appcenter_upload(
+      api_token: ENV["APPCENTER_API_TOKEN"],
+      app_name: ENV["APPCENTER_APP_NAME"],
+      destinations: "Collaborators",
+      file: generated[:ipa],
+      mandatory_update: true,
+      notify_testers: false,
+      owner_name: ENV["APPCENTER_OWNER_NAME"],
+    )
+
+    tag = format("v%<version>s_stage_%<build_number>s", version: generated[:version], build_number: generated[:build_number])
+
+    add_tag(tag)
+  end
+end

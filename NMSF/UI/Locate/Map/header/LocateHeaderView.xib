@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocateHeaderView" customModule="NMSF" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="p2f-bz-08v" id="NQ6-sc-KAU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="p2f-bz-08v">
+            <rect key="frame" x="0.0" y="0.0" width="572" height="174"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqa-zo-L8z" userLabel="Bottom Content View">
+                    <rect key="frame" x="0.0" y="110" width="572" height="64"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_background" translatesAutoresizingMaskIntoConstraints="NO" id="wve-bl-2SQ">
+                    <rect key="frame" x="0.0" y="0.0" width="572" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="LOA-n6-E1T"/>
+                    </constraints>
+                </imageView>
+                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ef-DS-APY" userLabel="Top View">
+                    <rect key="frame" x="0.0" y="56" width="572" height="54"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-AU-q0v">
+                            <rect key="frame" x="0.0" y="0.0" width="572" height="108"/>
+                            <color key="backgroundColor" name="FloridaKeysGreen"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="108" id="c7V-5l-X9y"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Florida Keys National Marine Sanctuary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTh-Bd-IMv">
+                            <rect key="frame" x="42" y="0.0" width="488" height="54"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" name="DarkBlue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DTh-Bd-IMv" firstAttribute="leading" secondItem="1Ef-DS-APY" secondAttribute="leading" constant="42" id="E3S-lK-8f9"/>
+                        <constraint firstItem="7Zn-AU-q0v" firstAttribute="top" secondItem="1Ef-DS-APY" secondAttribute="top" id="MKM-Qk-MdY"/>
+                        <constraint firstAttribute="trailing" secondItem="DTh-Bd-IMv" secondAttribute="trailing" constant="42" id="PYp-wx-NNa"/>
+                        <constraint firstItem="7Zn-AU-q0v" firstAttribute="leading" secondItem="1Ef-DS-APY" secondAttribute="leading" id="VMA-tm-Nf7"/>
+                        <constraint firstItem="DTh-Bd-IMv" firstAttribute="top" secondItem="1Ef-DS-APY" secondAttribute="top" id="XId-Je-m4o"/>
+                        <constraint firstAttribute="trailing" secondItem="7Zn-AU-q0v" secondAttribute="trailing" id="a1Y-gR-mp8"/>
+                        <constraint firstAttribute="bottom" secondItem="DTh-Bd-IMv" secondAttribute="bottom" id="fYo-Cs-oow"/>
+                        <constraint firstAttribute="height" constant="54" id="gB4-ur-tZO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7s1-m9-PMP"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7s1-m9-PMP" firstAttribute="trailing" secondItem="1Ef-DS-APY" secondAttribute="trailing" id="08f-Ko-ACD"/>
+                <constraint firstItem="1Ef-DS-APY" firstAttribute="leading" secondItem="7s1-m9-PMP" secondAttribute="leading" id="7Yf-nf-N0i"/>
+                <constraint firstItem="wve-bl-2SQ" firstAttribute="leading" secondItem="7s1-m9-PMP" secondAttribute="leading" id="E2H-vI-SV6"/>
+                <constraint firstItem="1Ef-DS-APY" firstAttribute="top" secondItem="p2f-bz-08v" secondAttribute="top" constant="56" id="FwF-do-zdF"/>
+                <constraint firstItem="wqa-zo-L8z" firstAttribute="leading" secondItem="7s1-m9-PMP" secondAttribute="leading" id="SP3-zK-ubt"/>
+                <constraint firstItem="wve-bl-2SQ" firstAttribute="top" secondItem="p2f-bz-08v" secondAttribute="top" id="Td6-N3-Kko"/>
+                <constraint firstItem="wqa-zo-L8z" firstAttribute="top" secondItem="1Ef-DS-APY" secondAttribute="top" constant="54" id="a2z-MW-mrr"/>
+                <constraint firstItem="wve-bl-2SQ" firstAttribute="trailing" secondItem="7s1-m9-PMP" secondAttribute="trailing" id="doK-3Q-HSD"/>
+                <constraint firstItem="wqa-zo-L8z" firstAttribute="trailing" secondItem="7s1-m9-PMP" secondAttribute="trailing" id="mfI-Cu-qtX"/>
+                <constraint firstAttribute="bottom" secondItem="wqa-zo-L8z" secondAttribute="bottom" id="oSN-4H-COn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="210.1449275362319" y="-159.375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wave_background" width="376" height="816"/>
+        <namedColor name="DarkBlue">
+            <color red="0.0" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FloridaKeysGreen">
+            <color red="0.019999999552965164" green="0.88599997758865356" blue="0.83499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

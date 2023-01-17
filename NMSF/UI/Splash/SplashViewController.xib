@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="NMSF" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="6tu-2S-wCz" id="JC3-4I-o7p"/>
+                <outlet property="view" destination="dXC-Dh-N4b" id="ZB5-oE-tzl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dXC-Dh-N4b">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_background" translatesAutoresizingMaskIntoConstraints="NO" id="Tdi-vQ-woC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.74946051840000005" green="0.12701126930000001" blue="0.14575085039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_splash" translatesAutoresizingMaskIntoConstraints="NO" id="VyR-QI-M3x">
+                    <rect key="frame" x="180" y="349" width="54" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="Vrj-T0-gzG"/>
+                        <constraint firstAttribute="width" constant="54" id="X2Q-tI-hSH"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tu-2S-wCz" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="180" y="430.5" width="54" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="54" id="EtR-pW-v4k"/>
+                        <constraint firstAttribute="height" constant="35" id="j0l-6t-yku"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="splash_loader"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vKY-mF-MQX"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6tu-2S-wCz" firstAttribute="top" secondItem="VyR-QI-M3x" secondAttribute="bottom" constant="15.5" id="4jY-IF-0rl"/>
+                <constraint firstAttribute="bottom" secondItem="Tdi-vQ-woC" secondAttribute="bottom" id="8yn-fz-Ob8"/>
+                <constraint firstAttribute="trailing" secondItem="Tdi-vQ-woC" secondAttribute="trailing" id="SPa-DN-u4z"/>
+                <constraint firstItem="Tdi-vQ-woC" firstAttribute="top" secondItem="dXC-Dh-N4b" secondAttribute="top" id="UjB-VT-bOi"/>
+                <constraint firstItem="Tdi-vQ-woC" firstAttribute="leading" secondItem="dXC-Dh-N4b" secondAttribute="leading" id="a6I-fl-zh0"/>
+                <constraint firstItem="VyR-QI-M3x" firstAttribute="centerX" secondItem="dXC-Dh-N4b" secondAttribute="centerX" id="jlC-5m-8Ga"/>
+                <constraint firstItem="6tu-2S-wCz" firstAttribute="centerX" secondItem="dXC-Dh-N4b" secondAttribute="centerX" id="raa-jO-eCA"/>
+                <constraint firstItem="6tu-2S-wCz" firstAttribute="centerY" secondItem="dXC-Dh-N4b" secondAttribute="centerY" id="uxr-Jl-Al8"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="6tu-2S-wCz"/>
+    </designables>
+    <resources>
+        <image name="location_splash" width="54" height="67"/>
+        <image name="wave_background" width="376" height="816"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreHeaderView" customModule="NMSF" customModuleProvider="target">
+            <connections>
+                <outlet property="animalImageView" destination="JAj-wX-p7Z" id="5bD-wz-FEN"/>
+                <outlet property="titleLabel" destination="Obo-I6-ouD" id="ujE-rk-A5t"/>
+                <outlet property="titleLabelTopConstraint" destination="Y4I-QL-iDw" id="in5-En-LOs"/>
+                <outlet property="view" destination="3ao-Hi-LgA" id="iPL-SU-p9K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3ao-Hi-LgA">
+            <rect key="frame" x="0.0" y="0.0" width="572" height="256"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-Rh-5nU" userLabel="Bottom Content View">
+                    <rect key="frame" x="0.0" y="110" width="572" height="146"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obo-I6-ouD">
+                            <rect key="frame" x="32" y="72" width="300.5" height="41"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <color key="textColor" name="DarkBlue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Obo-I6-ouD" secondAttribute="bottom" constant="33" id="S5t-uC-mHg"/>
+                        <constraint firstItem="Obo-I6-ouD" firstAttribute="top" secondItem="hRh-Rh-5nU" secondAttribute="top" constant="72" id="Y4I-QL-iDw"/>
+                        <constraint firstItem="Obo-I6-ouD" firstAttribute="leading" secondItem="hRh-Rh-5nU" secondAttribute="leading" constant="32" id="vvx-lL-X6x"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave_background" translatesAutoresizingMaskIntoConstraints="NO" id="KDW-g7-DAb">
+                    <rect key="frame" x="0.0" y="0.0" width="572" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="r9y-sI-b27"/>
+                    </constraints>
+                </imageView>
+                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFF-Es-qq5" userLabel="Top View">
+                    <rect key="frame" x="0.0" y="56" width="572" height="54"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-tl-otG">
+                            <rect key="frame" x="0.0" y="0.0" width="572" height="108"/>
+                            <color key="backgroundColor" name="FloridaKeysGreen"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="108" id="ubG-iF-djb"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Florida Keys National Marine Sanctuary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIa-It-GUc">
+                            <rect key="frame" x="42" y="0.0" width="488" height="54"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" name="DarkBlue"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bIa-It-GUc" secondAttribute="trailing" constant="42" id="1Qi-Dg-kuQ"/>
+                        <constraint firstItem="ARd-tl-otG" firstAttribute="top" secondItem="uFF-Es-qq5" secondAttribute="top" id="CGQ-9N-Cpt"/>
+                        <constraint firstItem="ARd-tl-otG" firstAttribute="leading" secondItem="uFF-Es-qq5" secondAttribute="leading" id="CKG-HD-Vb9"/>
+                        <constraint firstItem="bIa-It-GUc" firstAttribute="top" secondItem="uFF-Es-qq5" secondAttribute="top" id="Cbv-a7-8EP"/>
+                        <constraint firstAttribute="height" constant="54" id="TSa-eQ-Zzf"/>
+                        <constraint firstAttribute="trailing" secondItem="ARd-tl-otG" secondAttribute="trailing" id="gZj-5V-eXe"/>
+                        <constraint firstItem="bIa-It-GUc" firstAttribute="leading" secondItem="uFF-Es-qq5" secondAttribute="leading" constant="42" id="ot2-zI-yUq"/>
+                        <constraint firstAttribute="bottom" secondItem="bIa-It-GUc" secondAttribute="bottom" id="wvE-yb-HV5"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ray_brown" translatesAutoresizingMaskIntoConstraints="NO" id="JAj-wX-p7Z">
+                    <rect key="frame" x="292.5" y="61" width="317" height="224"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="224" id="0J4-LD-aQB"/>
+                        <constraint firstAttribute="width" constant="317" id="gh1-rm-dYk"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="uqB-89-P06"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hRh-Rh-5nU" secondAttribute="bottom" id="54h-ZP-cAO"/>
+                <constraint firstItem="JAj-wX-p7Z" firstAttribute="top" secondItem="uFF-Es-qq5" secondAttribute="top" constant="5" id="8DE-SH-fBJ"/>
+                <constraint firstItem="KDW-g7-DAb" firstAttribute="trailing" secondItem="uqB-89-P06" secondAttribute="trailing" id="9X4-TI-bRj"/>
+                <constraint firstItem="uFF-Es-qq5" firstAttribute="leading" secondItem="uqB-89-P06" secondAttribute="leading" id="DQr-sh-YEh"/>
+                <constraint firstAttribute="trailing" secondItem="JAj-wX-p7Z" secondAttribute="trailing" constant="-37.5" id="GOK-FI-1ja"/>
+                <constraint firstItem="uqB-89-P06" firstAttribute="trailing" secondItem="uFF-Es-qq5" secondAttribute="trailing" id="Hxx-m6-uCH"/>
+                <constraint firstItem="hRh-Rh-5nU" firstAttribute="leading" secondItem="uqB-89-P06" secondAttribute="leading" id="M4w-sG-zfD"/>
+                <constraint firstItem="hRh-Rh-5nU" firstAttribute="top" secondItem="uFF-Es-qq5" secondAttribute="top" constant="54" id="Q5L-dv-6Am"/>
+                <constraint firstItem="Obo-I6-ouD" firstAttribute="trailing" secondItem="JAj-wX-p7Z" secondAttribute="leading" constant="40" id="a2q-BG-PVo"/>
+                <constraint firstItem="KDW-g7-DAb" firstAttribute="top" secondItem="3ao-Hi-LgA" secondAttribute="top" id="j8z-nA-dnb"/>
+                <constraint firstItem="uFF-Es-qq5" firstAttribute="top" secondItem="3ao-Hi-LgA" secondAttribute="top" constant="56" id="usD-3R-b6Y"/>
+                <constraint firstItem="hRh-Rh-5nU" firstAttribute="trailing" secondItem="uqB-89-P06" secondAttribute="trailing" id="x04-eY-abx"/>
+                <constraint firstItem="KDW-g7-DAb" firstAttribute="leading" secondItem="uqB-89-P06" secondAttribute="leading" id="yNg-RA-PU4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="210.1449275362319" y="-131.91964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ray_brown" width="242" height="224"/>
+        <image name="wave_background" width="376" height="816"/>
+        <namedColor name="DarkBlue">
+            <color red="0.0" green="0.015686274509803921" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FloridaKeysGreen">
+            <color red="0.019999999552965164" green="0.88599997758865356" blue="0.83499997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

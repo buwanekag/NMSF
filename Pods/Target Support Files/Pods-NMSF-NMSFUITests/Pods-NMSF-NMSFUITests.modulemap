@@ -1,0 +1,6 @@
+framework module Pods_NMSF_NMSFUITests {
+  umbrella header "Pods-NMSF-NMSFUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

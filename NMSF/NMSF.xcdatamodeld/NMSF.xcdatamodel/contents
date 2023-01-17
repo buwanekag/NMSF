@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccessMode" representedClassName="AccessMode" syncable="YES" codeGenerationType="class">
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RemoteImage" inverseName="accessModeImage" inverseEntity="RemoteImage"/>
+        <relationship name="sites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Site" inverseName="accessModes" inverseEntity="Site"/>
+        <relationship name="zones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Zone" inverseName="accessModes" inverseEntity="Zone"/>
+    </entity>
+    <entity name="Activity" representedClassName="Activity" syncable="YES" codeGenerationType="class">
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="sites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Site" inverseName="activities" inverseEntity="Site"/>
+        <relationship name="zones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Zone" inverseName="activities" inverseEntity="Zone"/>
+    </entity>
+    <entity name="Habitat" representedClassName="Habitat" syncable="YES" codeGenerationType="class">
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="sites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Site" inverseName="habitats" inverseEntity="Site"/>
+        <relationship name="zones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Zone" inverseName="habitats" inverseEntity="Zone"/>
+    </entity>
+    <entity name="LocStory" representedClassName="LocStory" syncable="YES" codeGenerationType="class">
+        <attribute name="details" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RemoteImage" representedClassName="RemoteImage" syncable="YES" codeGenerationType="class">
+        <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="accessModeImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccessMode" inverseName="image" inverseEntity="AccessMode"/>
+        <relationship name="siteLargeImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Site" inverseName="largeImage" inverseEntity="Site"/>
+        <relationship name="siteSmallImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Site" inverseName="smallImage" inverseEntity="Site"/>
+        <relationship name="zoneLargeImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zone" inverseName="largeImage" inverseEntity="Zone"/>
+        <relationship name="zoneSmallImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zone" inverseName="smallImage" inverseEntity="Zone"/>
+    </entity>
+    <entity name="Site" representedClassName="Site" syncable="YES" codeGenerationType="class">
+        <attribute name="aboutDescription" optional="YES" attributeType="String"/>
+        <attribute name="contactNumber" optional="YES" attributeType="String"/>
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="hours" optional="YES" attributeType="String"/>
+        <attribute name="isBookmarked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="numMooringBuoys" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="subTitle" optional="YES" attributeType="String"/>
+        <relationship name="accessModes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AccessMode" inverseName="sites" inverseEntity="AccessMode"/>
+        <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="sites" inverseEntity="Activity"/>
+        <relationship name="containedIn" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zone" inverseName="sites" inverseEntity="Zone"/>
+        <relationship name="habitats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Habitat" inverseName="sites" inverseEntity="Habitat"/>
+        <relationship name="helpContacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SiteContact" inverseName="relevantSite" inverseEntity="SiteContact"/>
+        <relationship name="largeImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RemoteImage" inverseName="siteLargeImage" inverseEntity="RemoteImage"/>
+        <relationship name="siteType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SiteType" inverseName="site" inverseEntity="SiteType"/>
+        <relationship name="smallImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RemoteImage" inverseName="siteSmallImage" inverseEntity="RemoteImage"/>
+    </entity>
+    <entity name="SiteContact" representedClassName="SiteContact" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <relationship name="relevantSite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Site" inverseName="helpContacts" inverseEntity="Site"/>
+    </entity>
+    <entity name="SiteType" representedClassName="SiteType" syncable="YES" codeGenerationType="class">
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="site" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Site" inverseName="siteType" inverseEntity="Site"/>
+    </entity>
+    <entity name="Zone" representedClassName="Zone" syncable="YES" codeGenerationType="class">
+        <attribute name="aboutDescription" optional="YES" attributeType="String"/>
+        <attribute name="contactNumber" optional="YES" attributeType="String"/>
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="hours" optional="YES" attributeType="String"/>
+        <attribute name="isBookmarked" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="numMooringBuoys" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="subTitle" optional="YES" attributeType="String"/>
+        <relationship name="accessModes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AccessMode" inverseName="zones" inverseEntity="AccessMode"/>
+        <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="zones" inverseEntity="Activity"/>
+        <relationship name="habitats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Habitat" inverseName="zones" inverseEntity="Habitat"/>
+        <relationship name="helpContacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ZoneContact" inverseName="relevantZone" inverseEntity="ZoneContact"/>
+        <relationship name="largeImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RemoteImage" inverseName="zoneLargeImage" inverseEntity="RemoteImage"/>
+        <relationship name="polygonPoints" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ZonePolygonPoint" inverseName="relevantZone" inverseEntity="ZonePolygonPoint"/>
+        <relationship name="sites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Site" inverseName="containedIn" inverseEntity="Site"/>
+        <relationship name="smallImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RemoteImage" inverseName="zoneSmallImage" inverseEntity="RemoteImage"/>
+        <relationship name="zoneType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ZoneType" inverseName="zones" inverseEntity="ZoneType"/>
+    </entity>
+    <entity name="ZoneContact" representedClassName="ZoneContact" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <relationship name="relevantZone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zone" inverseName="helpContacts" inverseEntity="Zone"/>
+    </entity>
+    <entity name="ZonePolygonPoint" representedClassName="ZonePolygonPoint" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="relevantZone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Zone" inverseName="polygonPoints" inverseEntity="Zone"/>
+    </entity>
+    <entity name="ZoneType" representedClassName="ZoneType" syncable="YES" codeGenerationType="class">
+        <attribute name="abbreviation" optional="YES" attributeType="String"/>
+        <attribute name="entityId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="textDescription" optional="YES" attributeType="String"/>
+        <relationship name="zones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Zone" inverseName="zoneType" inverseEntity="Zone"/>
+    </entity>
+    <elements>
+        <element name="AccessMode" positionX="0" positionY="45" width="128" height="104"/>
+        <element name="Activity" positionX="-18" positionY="36" width="128" height="89"/>
+        <element name="Habitat" positionX="-9" positionY="135" width="128" height="89"/>
+        <element name="LocStory" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="RemoteImage" positionX="36" positionY="162" width="128" height="134"/>
+        <element name="Site" positionX="-63" positionY="9" width="128" height="299"/>
+        <element name="SiteContact" positionX="9" positionY="153" width="128" height="59"/>
+        <element name="SiteType" positionX="-36" positionY="27" width="128" height="74"/>
+        <element name="Zone" positionX="-54" positionY="18" width="128" height="284"/>
+        <element name="ZoneContact" positionX="0" positionY="144" width="128" height="59"/>
+        <element name="ZonePolygonPoint" positionX="18" positionY="135" width="128" height="74"/>
+        <element name="ZoneType" positionX="9" positionY="162" width="128" height="104"/>
+    </elements>
+</model>

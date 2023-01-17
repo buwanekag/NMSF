@@ -1,0 +1,8 @@
+{
+  "key": "-----BEGIN PRIVATE KEY-----\nMIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgGMK/14+SrZSPWD5aKcUBsF+8AnFXmLLazeF21mG1ZAWgCgYIKoZIzj0DAQehRANCAATuMlVkveSwsYjkQQ0k5eVQf4nSfCyGeyL0S5AVsDUIB1LqOv9rddYcxpw0bfYcRS5O4Uf6SdZV5n2dWUvN/Lkr\n-----END PRIVATE KEY-----",
+  "key_id": "2P9AS55P72",
+  "issuer_id": "69a6de78-e310-47e3-e053-5b8c7c11a4d1",
+  "is_key_content_base64": false,
+  "duration": 600,
+  "in_house": false
+}
